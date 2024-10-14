@@ -1,4 +1,5 @@
-Live Example: https://ashkanganj.github.io/Syllablast-Game/
+Live Example: [https://ashkanganj.github.io/Syllablast-Game/
+](https://syllablast-game.vercel.app/)
 
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
