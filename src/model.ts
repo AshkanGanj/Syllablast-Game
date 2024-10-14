@@ -85,6 +85,7 @@ export class Puzzle {
           syllable.isCorrect = true;
           correctLength++;
         } else {
+          // eslint-disable-next-line @typescript-eslint/no-unused-vars
           isMatching = false;
           break;
         }

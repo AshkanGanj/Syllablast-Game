@@ -20,7 +20,8 @@ export class Boundary {
     this.setMoveHistory = setMoveHistory;
     this.setIsComplete = setIsComplete;
   }
-
+  
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   handleConfigSelect(config: any) {
     const success = this.model.setConfig(config);
     if (success) {
@@ -33,6 +34,7 @@ export class Boundary {
     }
   }
 
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   handleSwap(selectedSyllables: any[]) {
     if (this.model.puzzle && selectedSyllables.length === 2) {
       const [first, second] = selectedSyllables;
@@ -78,8 +80,12 @@ export class Boundary {
   }
 
   updateScore() {
-    const score = this.model.puzzle.updateBoardCorrectness();
-    this.setScore(score);
+    if (this.model.puzzle) {
+      const score = this.model.puzzle.updateBoardCorrectness();
+      this.setScore(score);
+    } else {
+      this.setMessage("Puzzle is not initialized.");
+    }
   }
 
   checkPuzzleCompletion() {

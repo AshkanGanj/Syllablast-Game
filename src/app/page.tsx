@@ -15,6 +15,7 @@ export default function Home() {
   const [model] = useState<Model>(new Model([config1, config2, config3]));
   const [selectedConfig, setSelectedConfig] = useState<ConfigType | null>(null);
   const [message, setMessage] = useState<string>("");
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
   const [selectedSyllables, setSelectedSyllables] = useState<any[]>([]);
   const [moveHistory, setMoveHistory] = useState<string[]>([]);
   const [score, setScore] = useState<number>(0);
